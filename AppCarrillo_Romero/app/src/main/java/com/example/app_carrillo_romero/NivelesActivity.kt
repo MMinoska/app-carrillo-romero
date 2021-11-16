@@ -3,6 +3,7 @@ package com.example.app_carrillo_romero
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import com.example.app_carrillo_romero.databinding.ActivityNivelesBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -35,6 +36,12 @@ class NivelesActivity : AppCompatActivity() {
         atras.setOnClickListener {
             auth.signOut()
             val intent = Intent(this, SignInActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        val principiante: Button = findViewById(R.id.principianteButton) as Button
+        principiante.setOnClickListener {
+            val intent = Intent(this, NivelUnoActivity::class.java)
             this.startActivity(intent)
         }
 
