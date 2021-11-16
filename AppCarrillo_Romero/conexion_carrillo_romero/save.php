@@ -10,7 +10,7 @@
         $result = $mysql ->query($query);
 
         if ($result === TRUE){
-            echo "Funciono"
+            echo "Funciono";
         }else {
             echo "ERROR";
         }
