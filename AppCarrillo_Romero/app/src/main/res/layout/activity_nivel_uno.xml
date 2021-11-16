@@ -8,34 +8,20 @@
     tools:context=".NivelUnoActivity">
 
     <TextView
-        android:id="@+id/randomTresText"
+        android:id="@+id/randomCuatroText"
         android:layout_width="112dp"
         android:layout_height="49dp"
-        android:layout_marginStart="12dp"
         android:background="#009688"
         android:gravity="center"
-        android:text="Random3"
+        android:text="Random4"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/randomUnoText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
-
-    <TextView
-        android:id="@+id/randomUnoText"
-        android:layout_width="112dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:background="#009688"
-        android:gravity="center"
-        android:text="Random1"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <TextView
         android:id="@+id/randomSeisText"
@@ -51,55 +37,37 @@
         app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <TextView
-        android:id="@+id/randomDosText"
+        android:id="@+id/randomUnoText"
         android:layout_width="112dp"
         android:layout_height="49dp"
+        android:layout_marginStart="16dp"
         android:background="#009688"
         android:gravity="center"
-        android:text="Random2"
+        android:text="Random1"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintVertical_bias="0.318" />
 
     <TextView
-        android:id="@+id/randomCuatroText"
+        android:id="@+id/randomTresText"
         android:layout_width="112dp"
         android:layout_height="49dp"
+        android:layout_marginStart="12dp"
         android:background="#009688"
         android:gravity="center"
-        android:text="Random4"
+        android:text="Random3"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.769"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/randomUnoText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
-
-    <TextView
-        android:id="@+id/randomCincoText"
-        android:layout_width="112dp"
-        android:layout_height="49dp"
-        android:background="#009688"
-        android:gravity="center"
-        android:text="Random 5"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.224"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintVertical_bias="0.318" />
 
     <TextView
         android:id="@+id/randomSieteText"
@@ -116,7 +84,39 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/randomTresText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintVertical_bias="0.318" />
+
+    <TextView
+        android:id="@+id/randomDosText"
+        android:layout_width="112dp"
+        android:layout_height="49dp"
+        android:background="#009688"
+        android:gravity="center"
+        android:text="Random2"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158" />
+
+    <TextView
+        android:id="@+id/randomCincoText"
+        android:layout_width="112dp"
+        android:layout_height="49dp"
+        android:background="#009688"
+        android:gravity="center"
+        android:text="Random 5"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158" />
 
     <TextView
         android:id="@+id/textView24"
@@ -138,24 +138,39 @@
         android:layout_height="69dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:ems="10"
-        android:hint="Oracion Ordenada"
+        android:hint="Oración Ordenada"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
+        app:layout_constraintVertical_bias="0.755" />
 
     <Button
         android:id="@+id/Verificarbutton"
         android:layout_width="260dp"
         android:layout_height="64dp"
-        android:text="Verifica la Oracion"
+        android:text="Verifica la Oración"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839" />
+        app:layout_constraintVertical_bias="0.923" />
+
+    <TextView
+        android:id="@+id/responseText"
+        android:layout_width="192dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:text="Ordena la oración"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
