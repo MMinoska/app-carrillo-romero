@@ -30,12 +30,6 @@ class SignUpActivity : AppCompatActivity() {
 
         val queue = Volley.newRequestQueue(this)
         val urlPost = "http://localhost/conexion_carrillo_romero/save.php"
-        val stringRequest = StringRequest(Request.Method.POST,urlPost, Response.Listener { response ->
-
-        },Response.ErrorListener {
-
-        })
-        queue.add(stringRequest)
         binding.signUpButton.setOnClickListener {
 
             val mEmail = binding.emailEditText.text.toString()

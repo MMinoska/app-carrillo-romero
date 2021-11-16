@@ -1,9 +1,14 @@
 package com.example.app_carrillo_romero
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+
+
 
 class NivelUnoActivity : AppCompatActivity() {
     var sustantivo: List<String> = listOf("El libro ")
@@ -17,9 +22,37 @@ class NivelUnoActivity : AppCompatActivity() {
     var ordenada: String = ""
     var nuevo: String = ""
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nivel_uno)
+
+        val textView = findViewById<TextView>(R.id.prueba)
+        val queue = Volley.newRequestQueue(this)
+        val url = "http://www.google.com"
+
+        // Request a string response from the provided URL. Response.Listener
+        val stringRequest = StringRequest(Request.Method.GET, url, { response ->
+                // Display the first 500 characters of the response string.
+                textView.text = "Response is: ${response.substring(0, 500)}"
+            },
+            { textView.text = "No funciono" })
+
+        // Add the request to the RequestQueue.
+        queue.add(stringRequest)
+//        val url = "http://localhost/conexion_carrillo_romero/nivelUno.php"
+//        val stringRequest = StringRequest(Request.Method.GET,url, Response.Listener<> { response ->
+//            val jsonArray = JSONArray(response)
+//            for(i in 0 until jsonArray.length()){
+//                val jsonObject = JSONObject(jsonArray.getString(i))
+////                var text = jsonObject.get("sustantivo")
+//                var text = "HOLAAA"
+//                tvResultado.text = text.toString()
+//                Toast.makeText(applicationContext,text.toString(),Toast.LENGTH_LONG).show()
+//            }
+//        },Response.ErrorListener { error ->})
+//        queue.add(stringRequest)
+
 
         logica(random)
 
@@ -55,7 +88,6 @@ class NivelUnoActivity : AppCompatActivity() {
         ran6.text = prep_art_sus[random]
         var ran7: TextView = findViewById(R.id.randomSieteText) as TextView
         ran7.text = prep_sus[random]
-        println(ordenada)
 
     }
 
