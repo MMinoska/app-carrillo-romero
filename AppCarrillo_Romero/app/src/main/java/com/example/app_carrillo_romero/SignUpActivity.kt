@@ -1,14 +1,20 @@
 package com.example.app_carrillo_romero
 
+import android.app.DownloadManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.example.app_carrillo_romero.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import org.json.JSONArray
 import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
@@ -22,6 +28,14 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
 
+        val queue = Volley.newRequestQueue(this)
+        val urlPost = "http://localhost/conexion_carrillo_romero/save.php"
+        val stringRequest = StringRequest(Request.Method.POST,urlPost, Response.Listener { response ->
+
+        },Response.ErrorListener {
+
+        })
+        queue.add(stringRequest)
         binding.signUpButton.setOnClickListener {
 
             val mEmail = binding.emailEditText.text.toString()
@@ -75,6 +89,7 @@ class SignUpActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val intent = Intent(this, CheckEmailActivity::class.java)
                     this.startActivity(intent)
+
                 } else {
                     Toast.makeText(this, "No se pudo crear la cuenta. Vuelva a intertarlo",
                         Toast.LENGTH_SHORT).show()
