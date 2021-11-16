@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.signOutImageView.setOnClickListener {
-            signOut()
+            val intent = Intent(this, NivelesActivity::class.java)
+            this.startActivity(intent)
         }
 
     }
@@ -147,9 +148,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private  fun signOut(){
-        auth.signOut()
-        val intent = Intent(this, SignInActivity::class.java)
-        this.startActivity(intent)
-    }
 }
