@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853457764960",
+    "project_id": "integradora-carrillo-romero",
+    "storage_bucket": "integradora-carrillo-romero.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853457764960:android:9fdb27ca8ad9fe00f43905",
+        "android_client_info": {
+          "package_name": "com.example.app_carrillo_romero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853457764960-18e6vnsv9uq13to9d37aba8nncob7kta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQlYaVNu1cwCOIQTxJLnEFZtRQkFOe6GM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853457764960-18e6vnsv9uq13to9d37aba8nncob7kta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
