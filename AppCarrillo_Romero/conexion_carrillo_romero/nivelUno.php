@@ -1,8 +1,10 @@
 <?php
     include('functions.php');
-    $array = array();
+    //$tipo = $_GET['txtTi'];
+    $array = array();	
     if($resultset=getSQLResultSet("SELECT * FROM nivel_uno")){
-        while ($row = $resultset -> fetch_array(MYSQLI_NUM)){
+        
+        while ($row = $resultset->fetch_array(MYSQLI_NUM)){
             $e = array();
             $e['id_oracion_uno'] = $row[0];
             $e['sustantivo'] = $row[1];
@@ -12,8 +14,8 @@
             $e['verbo'] = $row[5];
             $e['prep_art_sus'] = $row[6];
             $e['prep_sus'] = $row[7];
-            $e['xp_user'] = $row[8];
             array_push($array,$e);
         }
-        echo json_encode($array);
+            echo json_encode($array);
     }
+?>

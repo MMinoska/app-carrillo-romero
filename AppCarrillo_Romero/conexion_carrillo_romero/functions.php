@@ -29,9 +29,9 @@
         $mysqli = mysqli_connect(DB_HOST,DB_USER,DS_PASS,DB_NAME) or die('unable to connect db');
         mysqli_set_charset($mysqli,'utf8');
 
-        if ($mysqli->connect_errno){
-            printf("Connect failed");
-            exit();
+        if ($mysqli->connect_errno) {
+             printf("Connect failed: %s\n", $mysqli->connect_error);
+             exit();
         }
         if ($mysqli->multi_query($comando)) {
             return $mysqli->store_result();

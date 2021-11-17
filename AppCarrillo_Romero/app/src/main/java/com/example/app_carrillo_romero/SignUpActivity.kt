@@ -5,7 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.TextView
 import android.widget.Toast
+import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -15,6 +17,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
 import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
@@ -89,5 +93,35 @@ class SignUpActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+    private fun addUser(mEmail:String, mPassword: String ) {
+        //getting the record values
+
+        val url = "http://192.168.100.55/conexion_carrillo_romero/save.php"
+
+        //creating volley string request
+        val stringRequest = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                try {
+                    val obj = JSONObject(response)
+                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            },
+            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String> {
+                val params = HashMap<String, String>()
+                params.put("Email_user", mEmail)
+                params.put("xp_user", "0")
+                return params
+            }
+        }
+
+
+        //adding request to queue
+//        VolleySingleton.instance?.addToRequestQueue(stringRequest)
     }
 }
