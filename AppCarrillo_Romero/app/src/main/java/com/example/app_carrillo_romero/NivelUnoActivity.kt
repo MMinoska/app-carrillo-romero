@@ -5,9 +5,21 @@ import android.os.Bundle
 import android.widget.*
 import com.android.volley.Request
 import com.android.volley.Response
+import com.android.volley.toolbox.HttpResponse
+import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+//import io.ktor.client.*
+////import io.ktor.client.features.observer.*
+//import io.ktor.client.request.*
+//import io.ktor.http.*
+//import io.ktor.client.engine.cio.*
+//import kotlinx.coroutines.experimental.async
+import org.json.JSONArray
+import org.json.JSONObject
 
+import java.net.URI
+import java.net.URL
 
 
 class NivelUnoActivity : AppCompatActivity() {
@@ -29,28 +41,44 @@ class NivelUnoActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.prueba)
         val queue = Volley.newRequestQueue(this)
-        val url = "http://www.google.com"
+//        val url  = "http://192.168.100.55/conexion_carrillo_romero/nivelUno.php"
+        val url ="https://www.google.com/"
+        var prueba = URL(url).readText()
+        println(prueba)
+//        val client = HttpClient()
+//
+//        val response: HttpResponse = client.request(url) {
+//            val method = HttpMethod.Get
+//        }
 
-        // Request a string response from the provided URL. Response.Listener
-        val stringRequest = StringRequest(Request.Method.GET, url, { response ->
-                // Display the first 500 characters of the response string.
-                textView.text = "Response is: ${response.substring(0, 500)}"
-            },
-            { textView.text = "No funciono" })
+//        prueba(url)
 
-        // Add the request to the RequestQueue.
-        queue.add(stringRequest)
-//        val url = "http://localhost/conexion_carrillo_romero/nivelUno.php"
-//        val stringRequest = StringRequest(Request.Method.GET,url, Response.Listener<> { response ->
-//            val jsonArray = JSONArray(response)
-//            for(i in 0 until jsonArray.length()){
-//                val jsonObject = JSONObject(jsonArray.getString(i))
-////                var text = jsonObject.get("sustantivo")
-//                var text = "HOLAAA"
-//                tvResultado.text = text.toString()
-//                Toast.makeText(applicationContext,text.toString(),Toast.LENGTH_LONG).show()
-//            }
-//        },Response.ErrorListener { error ->})
+
+//
+//
+//        val htmlContent = HttpClient.request<String>{
+//            url("https://en.wikipedia.org/wiki/Main_Page")
+//            method = HttpMethod.Get
+//        }
+
+
+
+
+//        val stringRequest = StringRequest(Request.Method.GET,url, Response.Listener<String>{ stringResponse ->
+//            val jsonArray = JSONArray(stringResponse)
+//            println(jsonArray)
+////            for(i in 0 until jsonArray.length()){
+////                val jsonObject = JSONObject(jsonArray.getString(i))
+//////                var text = jsonObject.get("sustantivo")
+////                var text = "HOLAAA"
+////                textView.text = text.toString()
+////                Toast.makeText(applicationContext,text.toString(),Toast.LENGTH_LONG).show()
+////            }
+//        },
+//            Response.ErrorListener{ volleyError ->
+//            println("Fallo")
+//        }
+//        )
 //        queue.add(stringRequest)
 
 
@@ -101,4 +129,14 @@ class NivelUnoActivity : AppCompatActivity() {
             }
         }
     }
+
+//    private fun prueba(url:String): Void{
+//        val httpClient: HttpClient = HttpClient()
+//        val response = async{ httpClient.get<HttpResponse>(url) {
+//            headers {
+//                append("Accept", "application/json")
+//            }
+//        }
+//        }
+//    }
 }
