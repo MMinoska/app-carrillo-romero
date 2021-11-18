@@ -4,24 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/marco"
     tools:context=".SignInActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_width="409dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="84dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="191dp"
-            android:layout_height="150dp"
+            android:layout_width="170dp"
+            android:layout_height="145dp"
             android:contentDescription="@string/all"
             app:srcCompat="@drawable/icono"
             tools:ignore="VectorDrawableCompat" />
@@ -29,7 +31,7 @@
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:gravity="center"
             android:text="@string/title_active_login"
             android:textColor="@color/black"
@@ -38,18 +40,20 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="393dp"
+        android:layout_height="254dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.35">
 
         <EditText
             android:id="@+id/emailEditText"
-            android:layout_width="match_parent"
+            android:layout_width="327dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
@@ -65,7 +69,7 @@
 
         <EditText
             android:id="@+id/passwordEditText"
-            android:layout_width="match_parent"
+            android:layout_width="321dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="24dp"
@@ -82,16 +86,16 @@
 
         <TextView
             android:id="@+id/recoveryAccountTextView"
-            android:layout_width="match_parent"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginStart="24dp"
-            android:textSize="16sp"
-            android:text="@string/forget_password"
-            android:gravity="end"
             android:layout_marginRight="32dp"
-            android:layout_marginLeft="24dp" />
+            android:gravity="end"
+            android:text="@string/forget_password"
+            android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signInAppCompatButton"
@@ -107,13 +111,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_width="390dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="76dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView

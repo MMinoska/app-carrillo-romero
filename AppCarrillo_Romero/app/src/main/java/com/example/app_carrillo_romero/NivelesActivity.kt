@@ -20,6 +20,7 @@ class NivelesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_niveles)
         auth = Firebase.auth
 
+
         val lead: ImageView = findViewById(R.id.leadButton) as ImageView
         lead.setOnClickListener {
             val intent = Intent(this, LeaderboardActivity::class.java)

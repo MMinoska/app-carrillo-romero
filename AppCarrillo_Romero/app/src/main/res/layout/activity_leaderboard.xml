@@ -4,99 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
-    tools:context=".LeaderboardActivity" >
+    android:background="@drawable/marco"
+    tools:context=".LeaderboardActivity">
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="206dp"
-        android:layout_height="69dp"
-        android:background="#009688"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Numero 5"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="206dp"
-        android:layout_height="69dp"
-        android:background="#009688"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Numero 4"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="206dp"
-        android:layout_height="69dp"
-        android:background="#009688"
+        android:id="@+id/leadTres"
+        android:layout_width="226dp"
+        android:layout_height="81dp"
+        android:background="@drawable/blanco"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Numero 3"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintVertical_bias="0.566" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="206dp"
-        android:layout_height="69dp"
-        android:background="#009688"
+        android:id="@+id/leadDos"
+        android:layout_width="226dp"
+        android:layout_height="81dp"
+        android:background="@drawable/blanco"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Numero 2"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364" />
+        app:layout_constraintVertical_bias="0.412" />
+
+    <TextView
+        android:id="@+id/leadCinco"
+        android:layout_width="226dp"
+        android:layout_height="81dp"
+        android:background="@drawable/blanco"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Numero 5"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
+
+    <TextView
+        android:id="@+id/leadCuatro"
+        android:layout_width="226dp"
+        android:layout_height="81dp"
+        android:background="@drawable/blanco"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Numero 4"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <TextView
+        android:id="@+id/leadUno"
+        android:layout_width="226dp"
+        android:layout_height="81dp"
+        android:background="@drawable/blanco"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Numero 1"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Top 5 de Jugadores"
         android:gravity="center|center_horizontal|center_vertical"
+        android:text="Top 5 de Jugadores"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.158" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="206dp"
-        android:layout_height="69dp"
-        android:background="#009688"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Numero 1"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
 </androidx.constraintlayout.widget.ConstraintLayout>

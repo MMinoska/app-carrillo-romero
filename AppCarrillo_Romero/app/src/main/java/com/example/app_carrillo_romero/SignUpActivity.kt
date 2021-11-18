@@ -4,6 +4,7 @@ import android.app.DownloadManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.widget.TextView
 import android.widget.Toast
@@ -20,6 +21,7 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.regex.Pattern
+import com.android.volley.VolleyError
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -33,7 +35,6 @@ class SignUpActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         val queue = Volley.newRequestQueue(this)
-        val urlPost = "http://localhost/conexion_carrillo_romero/save.php"
         binding.signUpButton.setOnClickListener {
 
             val mEmail = binding.emailEditText.text.toString()
@@ -94,34 +95,8 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
     }
-    private fun addUser(mEmail:String, mPassword: String ) {
-        //getting the record values
-
-        val url = "http://192.168.100.55/conexion_carrillo_romero/save.php"
-
-        //creating volley string request
-        val stringRequest = object : StringRequest(
-            Request.Method.POST, url,
-            Response.Listener<String> { response ->
-                try {
-                    val obj = JSONObject(response)
-                    Toast.makeText(applicationContext, obj.getString("message"), Toast.LENGTH_LONG).show()
-                } catch (e: JSONException) {
-                    e.printStackTrace()
-                }
-            },
-            Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message, Toast.LENGTH_LONG).show() }) {
-            @Throws(AuthFailureError::class)
-            override fun getParams(): Map<String, String> {
-                val params = HashMap<String, String>()
-                params.put("Email_user", mEmail)
-                params.put("xp_user", "0")
-                return params
-            }
-        }
 
 
-        //adding request to queue
-//        VolleySingleton.instance?.addToRequestQueue(stringRequest)
-    }
+
+
 }
