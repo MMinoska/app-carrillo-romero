@@ -26,7 +26,7 @@ class CheckEmailActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
         val user = auth.currentUser
-        val urlPost = "http://192.168.100.55/pruebas/ingreso.php"
+        val urlPost = "http://192.168.100.55/conexion_carrillo_romero/ingreso.php"
 
         binding.veficateEmailAppCompatButton.setOnClickListener {
             val profileUpdates = userProfileChangeRequest {
@@ -119,6 +119,7 @@ class CheckEmailActivity : AppCompatActivity() {
                     HashMap()
                 params["email_user"] = auth.currentUser.email
                 params["xp_user"] = "0"
+                params["name_user"] = auth.currentUser.email
                 return params
             }
         }
